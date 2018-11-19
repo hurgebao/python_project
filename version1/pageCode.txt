@@ -1,0 +1,209 @@
+<html>
+<head>
+<title>券商资料</title>
+<style>
+li {float:left;list-style:none;margin-left:10px;}
+</style>
+</head>
+<body>
+
+    <p>选择实盘账户所在券商</p>
+
+<ul>
+<li>A </li>
+<li><a href="爱建证券.htm">爱建证券</a></li>
+<li><a href="安信证券.htm">安信证券</a></li>
+</ul>
+<br>
+<ul>
+<li>B </li>
+<li><a href="渤海证券.htm">渤海证券</a></li>
+</ul>
+<br>
+<ul>
+<li>C </li>
+<li><a href="长城国瑞.htm">长城国瑞</a></li>
+<li><a href="长城证券.htm">长城证券</a></li>
+<li><a href="长江证券.htm">长江证券</a></li>
+<li><a href="财富证券.htm">财富证券</a></li>
+<li><a href="财通证券.htm">财通证券</a></li>
+<li><a href="华信证券.htm">财富里昂</a></li>
+</ul>
+<br>
+<ul>
+<li>D </li>
+<li><a href="大同证券.htm">大同证券</a></li>
+<li><a href="大通证券.htm">大通证券</a></li>
+<li><a href="德邦证券.htm">德邦证券</a></li>
+<li><a href="东兴证券.htm">东兴证券</a></li>
+<li><a href="东方证券.htm">东方证券</a></li>
+<li><a href="东莞证券.htm">东莞证券</a></li>
+<li><a href="东北证券.htm">东北证券</a></li>
+<li><a href="东海证券.htm">东海证券</a></li>
+<li><a href="东吴证券.htm">东吴证券</a></li>
+<li><a href="第一创业.htm">第一创业</a></li>
+</ul>
+<br>
+<ul>
+<li>E </li>
+</ul>
+<br>
+<ul>
+<li>F </li>
+<li><a href="方正证券.htm">方正证券</a></li>
+</ul>
+<br>
+<ul>
+<li>G </li>
+<li><a href="国都证券.htm">国都证券</a></li>
+<li><a href="国盛证券.htm">国盛证券</a></li>
+<li><a href="国信证券.htm">国信证券</a></li>
+<li><a href="国开证券.htm">国开证券</a></li>
+<li><a href="国元证券.htm">国元证券</a></li>
+<li><a href="国泰君安.htm">国泰君安</a></li>
+<li><a href="国联证券.htm">国联证券</a></li>
+<li><a href="国金证券.htm">国金证券</a></li>
+<li><a href="国海证券.htm">国海证券</a></li>
+<li><a href="广发证券.htm">广发证券</a></li>
+<li><a href="广州证券.htm">广州证券</a></li>
+<li><a href="光大证券.htm">光大证券</a></li>
+</ul>
+<br>
+<ul>
+<li>H </li>
+<li><a href="华泰证券.htm">华泰证券</a></li>
+<li><a href="华龙证券.htm">华龙证券</a></li>
+<li><a href="华西证券.htm">华西证券</a></li>
+<li><a href="华信证券.htm">华信证券</a></li>
+<li><a href="华鑫证券.htm">华鑫证券</a></li>
+<li><a href="华林证券.htm">华林证券</a></li>
+<li><a href="华安证券.htm">华安证券</a></li>
+<li><a href="华宝证券.htm">华宝证券</a></li>
+<li><a href="华福证券.htm">华福证券</a></li>
+<li><a href="华融证券.htm">华融证券</a></li>
+<li><a href="宏信证券.htm">宏信证券</a></li>
+<li><a href="宏源证券.htm">宏源证券</a></li>
+<li><a href="红塔证券.htm">红塔证券</a></li>
+<li><a href="海通证券.htm">海通证券</a></li>
+<li><a href="恒泰证券.htm">恒泰证券</a></li>
+</ul>
+<br>
+<ul>
+<li>I </li>
+</ul>
+<br>
+<ul>
+<li>J </li>
+<li><a href="江海证券.htm">江海证券</a></li>
+<li><a href="金元证券.htm">金元证券</a></li>
+<li><a href="九州证券.htm">九州证券</a></li>
+</ul>
+<br>
+<ul>
+<li>K </li>
+<li><a href="开源证券.htm">开源证券</a></li>
+</ul>
+<br>
+<ul>
+<li>L </li>
+<li><a href="华泰证券.htm">联合证券</a></li>
+<li><a href="联讯证券.htm">联讯证券</a></li>
+</ul>
+<br>
+<ul>
+<li>M </li>
+<li><a href="民生证券.htm">民生证券</a></li>
+<li><a href="民族证券.htm">民族证券</a></li>
+</ul>
+<br>
+<ul>
+<li>N </li>
+<li><a href="南京证券.htm">南京证券</a></li>
+</ul>
+<br>
+<ul>
+<li>O </li>
+</ul>
+<br>
+<ul>
+<li>P </li>
+<li><a href="平安证券.htm">平安证券</a></li>
+</ul>
+<br>
+<ul>
+<li>Q </li>
+<li><a href="齐鲁证券.htm">齐鲁证券</a></li>
+</ul>
+<br>
+<ul>
+<li>R </li>
+<li><a href="日信证券.htm">日信证券</a></li>
+</ul>
+<br>
+<ul>
+<li>S </li>
+<li><a href="首创证券.htm">首创证券</a></li>
+<li><a href="山西证券.htm">山西证券</a></li>
+<li><a href="上海证券.htm">上海证券</a></li>
+<li><a href="世纪证券.htm">世纪证券</a></li>
+<li><a href="申银万国.htm">申银万国</a></li>
+</ul>
+<br>
+<ul>
+<li>T </li>
+<li><a href="太平洋.htm">太平洋</a></li>
+<li><a href="天风证券.htm">天风证券</a></li>
+</ul>
+<br>
+<ul>
+<li>U </li>
+</ul>
+<br>
+<ul>
+<li>V </li>
+</ul>
+<br>
+<ul>
+<li>W </li>
+<li><a href="万和证券.htm">万和证券</a></li>
+<li><a href="万联证券.htm">万联证券</a></li>
+<li><a href="五矿证券.htm">五矿证券</a></li>
+</ul>
+<br>
+<ul>
+<li>X </li>
+<li><a href="兴业证券.htm">兴业证券</a></li>
+<li><a href="西南证券.htm">西南证券</a></li>
+<li><a href="西部证券.htm">西部证券</a></li>
+<li><a href="西藏同信.htm">西藏同信</a></li>
+<li><a href="新时代.htm">新时代</a></li>
+<li><a href="湘财证券.htm">湘财证券</a></li>
+<li><a href="信达证券.htm">信达证券</a></li>
+<li><a href="长城国瑞.htm">厦门证券</a></li>
+</ul>
+<br>
+<ul>
+<li>Y </li>
+<li><a href="英大证券.htm">英大证券</a></li>
+<li><a href="银泰证券.htm">银泰证券</a></li>
+<li><a href="银河证券.htm">银河证券</a></li>
+</ul>
+<br>
+<ul>
+<li>Z </li>
+<li><a href="招商证券.htm">招商证券</a></li>
+<li><a href="中银国际.htm">中银国际</a></li>
+<li><a href="中投证券.htm">中投证券</a></li>
+<li><a href="中航证券.htm">中航证券</a></li>
+<li><a href="中信证券.htm">中信证券</a></li>
+<li><a href="中信浙江.htm">中信浙江</a></li>
+<li><a href="中信万通.htm">中信万通</a></li>
+<li><a href="中信建投.htm">中信建投</a></li>
+<li><a href="中金证券.htm">中金证券</a></li>
+<li><a href="中原证券.htm">中原证券</a></li>
+<li><a href="中天证券.htm">中天证券</a></li>
+<li><a href="众成证券.htm">众成证券</a></li>
+<li><a href="浙商证券.htm">浙商证券</a></li>
+</ul>
+</body>
+</html>
