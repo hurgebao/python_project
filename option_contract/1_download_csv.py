@@ -10,7 +10,8 @@ Created on Fri Dec 28 14:08:55 2018
 import requests;
 import datetime
 from bs4 import BeautifulSoup
-
+date_begin='var toshowDate'
+date_length=20
 header_begin='header:'
 header_end='"停牌"]'
 list_begin='list:'
@@ -45,6 +46,12 @@ def getData(str):
     str = str[1:end]
     return str
 
+def getDate(str):
+    start=str.find(date_begin)+len(date_begin)
+    str=str[start:start+date_length]
+    str=str[str.find('\'')+1:str.find(';')-1]
+    return str.replace('-','');
+    
 
 url = 'http://www.sse.com.cn/assortment/options/disclo/preinfo/'
 response = requests.get(url)
@@ -61,9 +68,10 @@ headerlist=getHeader(str)
 datalist=getData(str)
 datalist=datalist[1:len(datalist)-1]
 dataarray=datalist.split('],[')
-now_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y%m%d-%H')
-f = open('option_contrac'+now_time+'.csv','w+',encoding="utf-8")
-f.write(headerlist+'\n')
+#now_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y%m%d-%H')
+now_time=getDate(str)
+f = open('option_contract_'+now_time+'.csv','w+',encoding="utf-8")
+f.write('"数据日期",'+headerlist+'\n')
 for data in dataarray:
-    f.write(data+'\n')
+    f.write('"'+now_time+'",'+data+'\n')
 f.close()
