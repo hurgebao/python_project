@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#!/usr/bin/python3
 """
 Created on Fri Dec 28 14:08:55 2018
 
@@ -61,7 +62,7 @@ datalist=getData(str)
 datalist=datalist[1:len(datalist)-1]
 dataarray=datalist.split('],[')
 now_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y%m%d-%H')
-f = open('c:/option_contrac'+now_time+'.csv','w+',encoding="utf-8")
+f = open('option_contrac'+now_time+'.csv','w+',encoding="utf-8")
 f.write(headerlist+'\n')
 for data in dataarray:
     f.write(data+'\n')
