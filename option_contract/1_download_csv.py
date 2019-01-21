@@ -70,7 +70,7 @@ datalist=datalist[1:len(datalist)-1]
 dataarray=datalist.split('],[')
 #now_time = datetime.datetime.strftime(datetime.datetime.now(),'%Y%m%d-%H')
 now_time=getDate(str)
-f = open('option_contract_'+now_time+'.csv','w+',encoding="utf-8")
+f = open('/home/www/optioncontract/option_contract_'+now_time+'.csv','w+',encoding="utf-8")
 f.write('"数据日期",'+headerlist+'\n')
 for data in dataarray:
     f.write('"'+now_time+'",'+data+'\n')
