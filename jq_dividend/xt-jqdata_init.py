@@ -98,6 +98,8 @@ else:
 
 
 
+														   
+																						 
 if len(stocksDB):
     # 操作DataFrame行列名
     stocksDB.columns.values.tolist()
@@ -132,7 +134,7 @@ print('\n 上市公司分红送股（除权除息）数据 -->  开始 ---------
 
 #说明 finance.STK_XR_XD.xxx是查询条件,其中xxx是字段名, 多个查询条件用逗号分隔,   limit(3000): 查询多少条
 #查询条件: a_registration_date(A股股权登记日)为当天, 进度为:　实施方案
-financeResult = query(finance.STK_XR_XD).filter(finance.STK_XR_XD.a_registration_date == nowDate, finance.STK_XR_XD.board_plan_bonusnote != '不分配不转增', finance.STK_XR_XD.plan_progress == '实施方案').limit(3000)
+financeResult = query(finance.STK_XR_XD).filter(finance.STK_XR_XD.a_registration_date >= '2020-01-01', finance.STK_XR_XD.board_plan_bonusnote != '不分配不转增', finance.STK_XR_XD.plan_progress == '实施方案').limit(3000)
 dfDBFinance = finance.run_query(financeResult)
 #print(dfDBFinance)
 
