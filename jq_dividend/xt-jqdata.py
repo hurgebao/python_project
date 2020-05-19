@@ -132,7 +132,7 @@ print('\n 上市公司分红送股（除权除息）数据 -->  开始 ---------
 
 #说明 finance.STK_XR_XD.xxx是查询条件,其中xxx是字段名, 多个查询条件用逗号分隔,   limit(3000): 查询多少条
 #查询条件: a_registration_date(A股股权登记日)为当天, 进度为:　实施方案
-financeResult = query(finance.STK_XR_XD).filter(finance.STK_XR_XD.a_registration_date == nowDate, finance.STK_XR_XD.board_plan_bonusnote != '不分配不转增', finance.STK_XR_XD.plan_progress == '实施方案').limit(3000)
+financeResult = query(finance.STK_XR_XD).filter(finance.STK_XR_XD.a_registration_date == nowDate, finance.STK_XR_XD.board_plan_bonusnote != '不分配不转增', finance.STK_XR_XD.plan_progress == '实施方案', finance.STK_XR_XD.bonus_type != '重整转增', finance.STK_XR_XD.bonus_type != '特别分红', finance.STK_XR_XD.bonus_type !='承诺补偿', finance.STK_XR_XD.bonus_type != '股改分红', finance.STK_XR_XD.bonus_type != '向公众股东赠送').limit(3000)
 dfDBFinance = finance.run_query(financeResult)
 #print(dfDBFinance)
 
@@ -162,7 +162,7 @@ delFinanceDB  = pymysql.Connect(
 	charset = 'utf8'
 )
 curFinance=delFinanceDB.cursor()
-delSq1Finance="delete from t_jqdata_finance where DATE_FORMAT(create_time, '%Y-%m-%d') = '" + t.strftime('%Y-%m-%d') + "'";
+delSq1Finance="delete from t_jqdata_finance where DATE_FORMAT(a_registration_date, '%Y-%m-%d') = '" + t.strftime('%Y-%m-%d') + "'";
 try:
    # 执行SQL语句
    curFinance.execute(delSq1Finance)
