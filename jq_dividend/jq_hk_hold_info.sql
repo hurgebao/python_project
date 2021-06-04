@@ -10,3 +10,12 @@ share_number bigint(20) COMMENT '持股数量 单位：股，于中央结算系�
 share_ratio	 decimal(10,4) COMMENT '持股比例 单位：％',
 create_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
 )comment '沪股通持仓信息表';
+
+
+select curr_info.* from 
+(select * from tcdb.jq_hk_hold_info
+where day=DATE_SUB(curdate(),INTERVAL 1 DAY))  curr_info 
+inner join 
+(select * from tcdb.jq_hk_hold_info where day=DATE_SUB(curdate(),INTERVAL 2 DAY) )   last_info 
+on curr_info.code=last_info.code
+where curr_info.share_ratio>last_info.share_ratio;

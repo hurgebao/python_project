@@ -11,6 +11,13 @@ import csv
 import datetime
 import time
 import pymysql.cursors
+
+def getYesterday(): 
+    today=datetime.date.today() 
+    oneday=datetime.timedelta(days=1) 
+    yesterday=today-oneday  
+    return yesterday.strftime('%Y-%m-%d')
+
 #jqdata登录账号
 accountNo = '18515971269'
 accountPwd = 'Xt123456'
@@ -22,13 +29,14 @@ db_database = 'tcdb'
 db_port = '33306'
 db_port_connect = 33306
 
-t = datetime.datetime.now()
+t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 #nowDate = t.strftime('%Y-%m-%d')
-nowDate='2021-06-02'
+#nowDate='2021-06-03'
+nowDate=getYesterday()
 auth(accountNo, accountPwd)
 
 #全量初始化
-dfDBFinance=finance.run_query(query(finance.STK_HK_HOLD_INFO).filter(finance.STK_HK_HOLD_INFO.link_id!='310005',finance.STK_HK_HOLD_INFO.share_ratio>=4).order_by(finance.STK_HK_HOLD_INFO.day.desc()))
+dfDBFinance=finance.run_query(query(finance.STK_HK_HOLD_INFO).filter(finance.STK_HK_HOLD_INFO.link_id!='310005',finance.STK_HK_HOLD_INFO.share_ratio>=3,finance.STK_HK_HOLD_INFO.day==nowDate).order_by(finance.STK_HK_HOLD_INFO.day.desc()))
 
 #dfDBFinance=finance.run_query(query(finance.STK_HK_HOLD_INFO).filter(finance.STK_HK_HOLD_INFO.link_id!='310005',finance.STK_HK_HOLD_INFO.share_ratio>=4,finance.STK_HK_HOLD_INFO.day==nowDate).order_by(finance.STK_HK_HOLD_INFO.day.desc()))
 
@@ -56,7 +64,7 @@ except:
    delFinanceDB.rollback()
 # 关闭连接
 delFinanceDB.close()
-print('\n 上市公司北向资金持仓数据 --> 数据库：清除当日已存数据 == 成功!! ===') 
+print('\n'+t+'  上市公司北向资金持仓数据 --> 数据库：清除当日'+nowDate+'已存数据 == 成功!! ===') 
 
 
 #如果数据不为空,直接插入数据库
@@ -70,10 +78,10 @@ if len(dfDBFinance):
     dfDBFinance.to_sql('jq_hk_hold_info', con=engineFinance, if_exists = 'append', index = False, index_label = False)
     #用完close
     conFinance.close() 
-    print('\n 上市公司北向资金持仓数据 --> 数据库：插入当日最新数据 == 成功!! ===') 
+    print('\n'+t+' 上市公司北向资金持仓数据 --> 数据库：插入当日最新数据 == 成功!! ===') 
 else:
-    print('\n 上市公司北向资金持仓数据 --> 数据库：插入当日最新数据 --> 无数据 !! => ')  
+    print('\n'+t+' 上市公司北向资金持仓数据 --> 数据库：插入当日最新数据 --> 无数据 !! => ')  
 
-print('\n 上市公司北向资金持仓数据 -->  结束 --------------------')
+print('\n'+t+' 上市公司北向资金持仓数据 -->  结束 --------------------')
 
 ########################### 上市公司北向资金持仓数据 End ################################
